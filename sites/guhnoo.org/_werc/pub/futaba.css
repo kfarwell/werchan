@@ -1,0 +1,169 @@
+/*
+  futaba
+  Stanley Lieber
+  http://plan9.stanleylieber.com/werc/werc-propaganda/css/
+*/
+
+body {
+  color: #800000;
+  background-color: #FFFFEE;
+}
+
+
+/* # Header # */
+.superHeader {
+  color: #800000;
+  background-color: #FFFFEE;
+}
+
+.superHeader a {
+  color: #0000EE;
+}
+
+.midHeader {
+  color: #800000;
+  background-color: #EEAA88;
+  border-width: 1px 0;
+}
+
+.headerTitle {
+  color: #800000;
+}
+
+.headerTitle a {
+  color: #0000EE;
+}
+
+.subHeader {
+  color: #800000;
+  background-color: gray;
+}
+
+.subHeader a {
+  color: #0000EE;
+  text-decoration: none;
+}  
+
+.superHeader .highlight, .subHeader .highlight {
+  color: #0000EE;
+}
+
+
+/* # Side # */
+#side-bar {
+  border-right: 1px solid #8F7B6B;
+}
+
+#side-bar div {
+  border-bottom: 1px solid #8F7B6B;
+}
+
+li ul {
+  padding-left: 1.0em !important;
+}
+
+#side-bar a {
+  color: #0000EE;
+  text-decoration: none;
+  padding: 0.35em 1ex 0.35em 2mm;
+  border-left: #800000 solid 0.2em;
+}
+
+.thisPage, .thisPage a {
+  color: #800000!important;
+  background-color: #0000EE;
+}
+
+#side-bar a:hover {
+  color: #0000EE;
+  background-color: #DD0000;
+  border-left: #800000 solid 0.2em;
+}
+
+#side-bar .sideBarText a:hover {
+  color: #800000;
+}
+
+
+/* # Main Copy # */
+#main-copy {
+  color: #800000;
+  border-left: 1px solid #8F7B6B;
+}
+
+#main-copy a {
+  color: #800000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-copy a:hover {
+  color: #800000;
+  text-decoration: underline;
+}
+
+#main-copy h1, #main-copy h2 {
+  color: #800000;
+  border-bottom: 2px solid #800000;
+}
+
+#main-copy h2 {
+  border-bottom: 1px solid #800000;
+}
+
+#main-copy .topOfPage {
+  color: #800000;
+}
+
+
+/* # Footer # */
+#footer {
+  color: #0000EE;
+  background: #EEAA88;
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm .15em 2.5mm;
+  border: solid 0 #8F7B6B;
+  border-width: 1px 0 1px 0;
+}
+
+#footer a {
+  color: #0000EE;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* GENERAL */
+
+table {
+  border: solid 1px #800000;
+}
+th {
+  background-color: gray;
+  border: solid 1px #800000;
+}
+td {
+  background-color: #FF7FA8;
+  border: solid 1px #800000;
+}
+
+hr {
+  border-color: #800000;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px solid #8F7B6B;
+}
+
+blockquote {
+  border-left: 1px solid gray;
+}
+
+
+.notify_errors,
+.notify_notes,
+.notify_success { padding: .8em; margin-bottom: 1em; border: 2px solid #8F7B6B; }

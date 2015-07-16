@@ -1,0 +1,174 @@
+/*
+  burichan
+  werchan
+  http://guhnoo.org/
+*/
+
+body {
+  color: #000;
+  background-color: #EEF2FF;
+}
+
+
+/* # Header # */
+.superHeader {
+  color: #000;
+  background-color: #EEF2FF;
+}
+
+.superHeader a {
+  color: #000;
+}
+
+.midHeader {
+  color: #000;
+  background-color: #D6DAF0;
+  border-width: 1px 0;
+}
+
+.headerTitle {
+  color: #000;
+}
+
+.headerTitle a {
+  color: #000;
+}
+
+.subHeader {
+  color: #000;
+  background-color: gray;
+}
+
+.subHeader a {
+  color: #000;
+  text-decoration: none;
+}  
+
+.superHeader .highlight, .subHeader .highlight {
+  color: #000;
+}
+
+
+/* # Side # */
+#side-bar {
+  border-right: 1px solid #000;
+}
+
+#side-bar div {
+  border-bottom: 1px solid #000;
+}
+
+li ul {
+  padding-left: 1.0em !important;
+}
+
+#side-bar a {
+  color: #000;
+  text-decoration: none;
+  padding: 0.35em 1ex 0.35em 2mm;
+  font-size: 104%;
+  border-left: #D00 solid 0.2em;
+}
+
+.thisPage, .thisPage a {
+  color: #D00!important;
+  background-color: #000;
+}
+
+#side-bar a:hover {
+  color: #000;
+  background-color: #DD0000;
+  border-left: #D00 solid 0.2em;
+}
+
+#side-bar .sideBarText a:hover {
+  color: #000;
+}
+
+
+/* # Main Copy # */
+#main-copy {
+  color: #000;
+  border-left: 1px solid #000;
+}
+
+#main-copy a {
+  color: #D00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-copy a:hover {
+  color: #D00;
+  text-decoration: underline;
+}
+
+#main-copy h1, #main-copy h2 {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+#main-copy h2 {
+  border-bottom: 1px solid #000;
+}
+
+#main-copy .topOfPage {
+  color: #000;
+}
+
+
+/* # Footer # */
+#footer {
+  color: #000;
+  background: #D6DAF0;
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm .15em 2.5mm;
+  border: solid 0 #000;
+  border-width: 1px 0 1px 0;
+}
+
+#footer .left {
+  line-height: 1.45em;
+}
+
+#footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* GENERAL */
+
+table {
+  border: solid 1px #000;
+}
+th {
+  background-color: gray;
+  border: solid 1px #000;
+}
+td {
+  background-color: #FF7FA8;
+  border: solid 1px #000;
+}
+
+hr {
+  border-color: #000;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px solid #000;
+}
+
+blockquote {
+  border-left: 1px solid gray;
+}
+
+
+.notify_errors,
+.notify_notes,
+.notify_success { padding: .8em; margin-bottom: 1em; border: 2px solid #000; }

@@ -1,0 +1,174 @@
+/*
+  burichan
+  werchan
+  http://guhnoo.org/
+*/
+
+body {
+  color: #DCDCCC;
+  background-color: #3F3F3F;
+}
+
+
+/* # Header # */
+.superHeader {
+  color: #DCDCCC;
+  background-color: #3F3F3F;
+}
+
+.superHeader a {
+  color: #705050;
+}
+
+.midHeader {
+  color: #DCDCCC;
+  background-color: #1F1F1F;
+  border-width: 1px 0;
+}
+
+.headerTitle {
+  color: #DCDCCC;
+}
+
+.headerTitle a {
+  color: #DCDCCC;
+}
+
+.subHeader {
+  color: #DCDCCC;
+  background-color: gray;
+}
+
+.subHeader a {
+  color: #DCDCCC;
+  text-decoration: none;
+}  
+
+.superHeader .highlight, .subHeader .highlight {
+  color: #DCDCCC;
+}
+
+
+/* # Side # */
+#side-bar {
+  border-right: 1px solid #DCDCCC;
+}
+
+#side-bar div {
+  border-bottom: 1px solid #DCDCCC;
+}
+
+li ul {
+  padding-left: 1.0em !important;
+}
+
+#side-bar a {
+  color: #DCDCCC;
+  text-decoration: none;
+  padding: 0.35em 1ex 0.35em 2mm;
+  font-size: 104%;
+  border-left: #705050 solid 0.2em;
+}
+
+.thisPage, .thisPage a {
+  color: #705050 !important;
+  background-color: #DCDCCC;
+}
+
+#side-bar a:hover {
+  color: #DCDCCC;
+  background-color: #1F1F1F;
+  border-left: #705050 solid 0.2em;
+}
+
+#side-bar .sideBarText a:hover {
+  color: #DCDCCC;
+}
+
+
+/* # Main Copy # */
+#main-copy {
+  color: #DCDCCC;
+  border-left: 1px solid #DCDCCC;
+}
+
+#main-copy a {
+  color: #705050;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-copy a:hover {
+  color: #705050;
+  text-decoration: underline;
+}
+
+#main-copy h1, #main-copy h2 {
+  color: #DCDCCC;
+  border-bottom: 2px solid #DCDCCC;
+}
+
+#main-copy h2 {
+  border-bottom: 1px solid #DCDCCC;
+}
+
+#main-copy .topOfPage {
+  color: #DCDCCC;
+}
+
+
+/* # Footer # */
+#footer {
+  color: #DCDCCC;
+  background: #1F1F1F;
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm .15em 2.5mm;
+  border: solid 0 #DCDCCC;
+  border-width: 1px 0 1px 0;
+}
+
+#footer .left {
+  line-height: 1.45em;
+}
+
+#footer a {
+  color: #DCDCCC;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* GENERAL */
+
+table {
+  border: solid 1px #DCDCCC;
+}
+th {
+  background-color: gray;
+  border: solid 1px #DCDCCC;
+}
+td {
+  background-color: #FF7FA8;
+  border: solid 1px #DCDCCC;
+}
+
+hr {
+  border-color: #DCDCCC;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px solid #DCDCCC;
+}
+
+blockquote {
+  border-left: 1px solid gray;
+}
+
+
+.notify_errors,
+.notify_notes,
+.notify_success { padding: .8em; margin-bottom: 1em; border: 2px solid #DCDCCC; }

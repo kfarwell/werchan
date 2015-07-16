@@ -1,0 +1,100 @@
+# Blender MTL File: 'cartoon_character.blend'
+# Material Count: 10
+
+newmtl None
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl bg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.186407 0.114540 0.088083
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+
+newmtl body
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.589474 0.589474 0.589474
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd /mnt/home/kuko/Downloads/textures/body_diffuse.png
+
+newmtl clothes
+Ns 749.999996
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd /mnt/home/kuko/Downloads/textures/body_diffuse.png
+
+newmtl clothes_clothes_diffuse.png
+Ns 749.999996
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd /mnt/home/kuko/Downloads/textures/clothes_diffuse.png
+
+newmtl eyelid
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.012795 0.012795 0.012795
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd /mnt/home/kuko/Downloads/textures/body_diffuse.png
+
+newmtl eyes
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd /mnt/home/kuko/Downloads/textures/eyes.png
+
+newmtl hair
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd /mnt/home/kuko/Downloads/textures/body_diffuse.png
+
+newmtl hair_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd /mnt/home/kuko/Downloads/textures/hair_diffuse.png
+
+newmtl shadow
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 0
+map_Kd /mnt/home/kuko/Downloads/textures/body_diffuse.png
+map_d /mnt/home/kuko/Downloads/textures/shadow.png

@@ -1,0 +1,43 @@
+# Blender MTL File: 'Pirate Girl_upload.blend'
+# Material Count: 4
+
+newmtl BSEPNG
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump /mnt/home/kuko/Textures/normal_1.png
+map_Kd /mnt/home/kuko/Textures/girl_texture_2.png
+
+newmtl black
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+
+newmtl eye_cycles
+Ns 296.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.529491 0.529491 0.529491
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd /mnt/home/kuko/Textures/eye2.png
+
+newmtl eye_highlight.001
+Ns 296.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.529491 0.529491 0.529491
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 0.000000
+illum 0
+map_Kd /mnt/home/kuko/Textures/eye2.png
+map_d /mnt/home/kuko/Textures/eye2.png

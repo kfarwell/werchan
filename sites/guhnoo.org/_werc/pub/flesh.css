@@ -1,0 +1,151 @@
+/*
+  flesh
+  Stanley Lieber
+  http://plan9.stanleylieber.com/werc/werc-propaganda/css/
+*/
+
+body {
+  background-color: #EFC5A4;
+}
+
+
+/* # Header # */
+.superHeader {
+  color: black;
+  background-color: #FF7FA8;
+}
+
+.superHeader a {
+  text-decoration: none;
+}
+
+.superHeader a:hover {
+  text-decoration: underline;
+}
+
+.midHeader {
+  color: black;
+  background-color: #FF7FA8;
+  border-width: 1px 0;
+}
+
+.headerTitle a {
+  color: black;
+  text-decoration: none;
+}
+
+.subHeader {
+  color: black;
+  background-color: gray;
+}
+
+.subHeader a {
+  color: black;
+  text-decoration: none;
+}  
+
+.superHeader .highlight, .subHeader .highlight {
+  color: white;
+}
+
+
+/* # Side # */
+#side-bar {
+  border-right: 1px solid #8F7B6B;
+}
+
+#side-bar div {
+  border-bottom: 1px solid #8F7B6B;
+}
+
+li ul {
+  padding-left: 1.0em !important;
+}
+
+#side-bar a {
+  color: black;
+  text-decoration: none;
+  text-transform: initial;
+  font-weight: bold!important;
+  border-left: #8F7B6B solid 0.2em;
+}
+
+#side-bar a:hover {
+  background-color: #FF9F9F;
+  border-left: #FF0000 solid 0.2em;
+}
+
+#side-bar .sideBarText a:hover {
+  color: black;
+}
+
+
+/* # Main Copy # */
+#main-copy {
+  border-left: 1px solid #8F7B6B;
+}
+
+#main-copy a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-copy a:hover {
+  background: #FF9F9F;
+  color: black;
+}
+
+#main-copy h1, #main-copy h2 {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+#main-copy h2 {
+  border-bottom: 1px solid black;
+}
+
+#main-copy .topOfPage {
+  color: black;
+}
+
+
+/* # Footer # */
+#footer {
+  background: #EFC5A4;
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm .15em 2.5mm;
+  border: solid 0 #8F7B6B;
+  border-width: 1px 0 1px 0;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* GENERAL */
+
+th {
+  background-color: gray;
+}
+td {
+  background-color: #FF7FA8;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px solid #8F7B6B;
+}
+
+blockquote {
+  border-left: 1px solid gray;
+}
+
+.notify_errors,
+.notify_notes,
+.notify_success { padding: .8em; margin-bottom: 1em; border: 2px solid #8F7B6B; }

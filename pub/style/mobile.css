@@ -1,0 +1,31 @@
+body {
+  font-size: 115%;
+}
+
+#side-bar a {
+  padding: 0.75em 1ex 0.75em 2mm;
+  font-size: 150%;
+}
+
+.superHeader {
+  font-size: 250%;
+}
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+
+.superHeader span {
+  display: block;
+}
+
+button, select, input {
+  font-size: 200%;
+}
+
+textarea {
+  max-width: 100%;
+}

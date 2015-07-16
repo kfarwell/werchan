@@ -1,0 +1,18 @@
+fn conf_enable_radio {
+    enable_radio=yes
+    conf_enable_app radio
+}
+
+fn radio_init {
+    if(~ $req_path /radio) {
+        handler_body_main=(tpl_handler `{get_lib_file radio/form.tpl apps/radio/form.tpl})
+        pageTitle='radio'
+    }
+    if(! ~ '' $"post_arg_radio_queue $"post_arg_radio_url)
+        queue_song
+}
+
+fn queue_song {
+    mpc add $post_arg_radio_url
+    mpc play
+}

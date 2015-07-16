@@ -1,0 +1,16 @@
+How to deploy werchan on your own site
+======================================
+
+1. Follow the werc installation instructions in README
+2. Create a cronjob to run bin/prune.rc and delete old threads
+3. Rename sites/guhnoo.org to match your domain
+4. Edit sites/your_site/_werc/config
+5. Edit sites/your_site/*.html
+6. Add admin badges to sites/your_site/team/
+7. Remove or replace the advertisement in sites/your_site/_werc/lib/footer.inc
+8. Remove boards that you do not want under sites/your_site/
+9. Create boards
+   i) Copy sites/your_site/example to sites/your_site/board_name
+  ii) Edit sites/your_site/board_name/_werc/config
+ iii) Add board_name to bin/prune.rc
+  iv) Add board_name to sites/your_site/board_name/_werc/lib/top_bar.inc

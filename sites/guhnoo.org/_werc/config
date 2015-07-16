@@ -1,0 +1,10 @@
+siteTitle='werchan'
+siteSubTitle='a trendy slogan goes here'
+
+sideBarNavTitle='Thread List'
+conf_hide_paths radio TODO fqa rules privacy userscripts donate markdown banners img team example
+
+conf_enable_comments
+bridge_anon_comments=yes
+conf_enable_wiki
+conf_enable_radio

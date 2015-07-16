@@ -1,0 +1,126 @@
+/*
+  apple
+  Stanley Lieber
+  http://plan9.stanleylieber.com/werc/werc-propaganda/css/
+*/
+
+body {
+  background-color: #F5F6F7;
+  background-image: url('/img/applebg.jpg');
+}
+
+
+/* # Header # */
+.superHeader {
+  color: #5B5B5B;
+  background-color: transparent;
+}
+
+.superHeader a {
+  color: #4FAAD8;
+}
+
+.midHeader {
+  color: white;
+  background-color: #5B5B5B;
+  border-width: 1px 0;
+}
+
+.headerTitle {
+  color: white;
+}
+
+.headerTitle a { color: white; }
+
+.subHeader {
+  color: #5B5B5B;
+  background-color: #F5F6F7;
+}
+
+.subHeader a {
+  color: #4FAAD8;
+}  
+
+
+/* # Side # */
+#side-bar {
+  border-right: 1px solid #5B5B5B;
+}
+
+#side-bar div {
+  border-bottom: 1px solid #5B5B5B;
+}
+
+#side-bar a {
+  color: #4FAAD8;
+  text-transform: initial;
+  font-weight: bold!important;
+}
+
+#side-bar a:hover {
+  color: #575757;
+  background-color: white;
+}
+
+
+/* # Main Copy # */
+#main-copy {
+  color: #5B5B5B;
+  border-left: 1px solid #5B5B5B;
+}
+
+#main-copy a {
+  color: #4FAAD8;
+  text-decoration: none;
+}
+
+#main-copy a:hover {
+  color:  #4FAAD8;
+  text-decoration: underline;
+}
+
+#main-copy h1, #main-copy h2 {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+#main-copy h2 {
+  border-bottom: 1px solid black;
+}
+
+#main-copy .topOfPage {
+  color: black;
+}
+
+
+/* # Footer # */
+#footer {
+  color: black;
+  background: transparent;
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm .15em 2.5mm;
+  border: solid 0 #5B5B5B;
+  border-width: 1px 0 1px 0;
+}
+
+#footer a {
+  color: #4FAAD8;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* GENERAL */
+
+acronym, .titleTip {
+  border-bottom: 1px solid #5B5B5B;
+}
+
+
+.notify_errors,
+.notify_notes,
+.notify_success { padding: .8em; margin-bottom: 1em; border: 2px solid #5B5B5B; }

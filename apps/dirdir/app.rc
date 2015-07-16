@@ -1,0 +1,98 @@
+fn conf_enable_wiki {
+    enable_wiki=yes
+    wiki_editors_groups=$* 
+    conf_enable_app dirdir
+}
+
+fn dirdir_init {
+    if(! ~ $#enable_wiki 0) {
+        lp=$local_path
+        dirdir_file=$lp.html
+        dirdir_dir=$dirdir_file^'_werc/dirdir/'
+ 
+        if(~ 1 $#post_arg_dirdir_edit $#post_arg_dirdir_preview)
+            handler_body_main=(tpl_handler `{get_lib_file dirdir/edit.tpl apps/dirdir/edit.tpl})
+
+        if not if(! ~ '' $"post_arg_dirdir_save $"post_arg_edit_text $"post_arg_subject $"post_arg_ima_robot && ~ $"post_arg_ima_robot 'not' && ! ~ $siteTitle '/poll/' || ! ~ '' $"post_arg_poll0 $"post_arg_poll1)
+            save_page
+    }
+}
+
+fn save_page {
+    lp=`{echo $local_path | sed 's/index$//'}^`{echo $post_arg_subject | sed 's,[^A-Za-z0-9],_,g; s/^_/baka_/'}
+    dirdir_file=$lp.html
+    if(! test -f $dirdir_file && ~ `{echo $dirdir_file | tr -dc '/' | wc -c} 3) {
+        dirdir_dir=$dirdir_file^'_werc/dirdir/'
+        dirdir_verdir=$dirdir_dir/^`{date -n}^/
+        mkdir -p $dirdir_verdir
+        umask 002
+
+        if(~ $logged_user '')
+            logged_user=Anonymous
+
+        # XXX Use a tmp file and  mv(1) to ensure updates are atomic?
+        echo $logged_user > $dirdir_verdir/author
+
+        echo '<h1>'$post_arg_subject'</h1>' > $dirdir_verdir/data
+        echo '<p><b>' >> $dirdir_verdir/data
+
+        if(~ $siteTitle '/int/') {
+            #echo '<img src="balls/'`{$REMOTE_ADDR | ip2country}'" alt="'`{$REMOTE_ADDR | ip2country}'" />' >> $dirdir_verdir/data
+        }
+
+        echo '<i>'$logged_user'</i>' >> $dirdir_verdir/data
+        echo `{date} >> $dirdir_verdir/data
+
+        postnum=`{cat $dirdir_dir/../../postnum}
+        echo '<a id="'$postnum'" href="#top">No.</a><a onclick="quoteOP()">'$postnum'</a>' >> $dirdir_verdir/data
+        echo $postnum | awk 'echo $1++' > $dirdir_dir/../../postnum
+
+        echo '</b></p>' >> $dirdir_verdir/data
+        echo >> $dirdir_verdir/data
+        echo $post_arg_edit_text | $formatter >> $dirdir_verdir/data
+
+        if(~ $siteTitle '/poll/') {
+            post_arg_poll0_fmt=`{echo $post_arg_poll0 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            post_arg_poll1_fmt=`{echo $post_arg_poll1 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll2 '') post_arg_poll2_fmt=`{echo $post_arg_poll2 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll3 '') post_arg_poll3_fmt=`{echo $post_arg_poll3 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll4 '') post_arg_poll4_fmt=`{echo $post_arg_poll4 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll5 '') post_arg_poll5_fmt=`{echo $post_arg_poll5 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll6 '') post_arg_poll6_fmt=`{echo $post_arg_poll6 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll7 '') post_arg_poll7_fmt=`{echo $post_arg_poll7 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll8 '') post_arg_poll8_fmt=`{echo $post_arg_poll8 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+            if(! ~ $"post_arg_poll9 '') post_arg_poll9_fmt=`{echo $post_arg_poll9 | sed 's, ,_,g; s,[^A-Za-z0-9],_,g'}
+
+            echo $post_arg_poll0_fmt > $lp^_poll
+            echo $post_arg_poll1_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll2 '') echo $post_arg_poll2_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll3 '') echo $post_arg_poll3_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll4 '') echo $post_arg_poll4_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll5 '') echo $post_arg_poll5_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll6 '') echo $post_arg_poll6_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll7 '') echo $post_arg_poll7_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll8 '') echo $post_arg_poll8_fmt >> $lp^_poll
+            if(! ~ $"post_arg_poll9 '') echo $post_arg_poll9_fmt >> $lp^_poll
+
+            echo '<hr />' >> $dirdir_verdir/data
+            echo '<p><b>Options:</b></p>' >> $dirdir_verdir/data
+            echo '<ul>' >> $dirdir_verdir/data
+            echo '  <li><a onclick="vote('''$post_arg_poll0_fmt''')">'$post_arg_poll0'</a></li>' >> $dirdir_verdir/data
+            echo '  <li><a onclick="vote('''$post_arg_poll1_fmt''')">'$post_arg_poll1'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll2 '') echo '  <li><a onclick="vote('''$post_arg_poll2_fmt''')">'$post_arg_poll2'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll3 '') echo '  <li><a onclick="vote('''$post_arg_poll3_fmt''')">'$post_arg_poll3'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll4 '') echo '  <li><a onclick="vote('''$post_arg_poll4_fmt''')">'$post_arg_poll4'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll5 '') echo '  <li><a onclick="vote('''$post_arg_poll5_fmt''')">'$post_arg_poll5'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll6 '') echo '  <li><a onclick="vote('''$post_arg_poll6_fmt''')">'$post_arg_poll6'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll7 '') echo '  <li><a onclick="vote('''$post_arg_poll7_fmt''')">'$post_arg_poll7'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll8 '') echo '  <li><a onclick="vote('''$post_arg_poll8_fmt''')">'$post_arg_poll8'</a></li>' >> $dirdir_verdir/data
+            if(! ~ $"post_arg_poll9 '') echo '  <li><a onclick="vote('''$post_arg_poll9_fmt''')">'$post_arg_poll9'</a></li>' >> $dirdir_verdir/data
+            echo '</ul>' >> $dirdir_verdir/data
+        }
+
+        cp $dirdir_verdir/data $dirdir_file
+
+        post_redirect $base_url^$req_path^`{echo $post_arg_subject | sed 's,[^A-Za-z0-9],_,g; s/^_/baka_/'}
+        #notify_notes='Posted <a href="'$"req_path'">'$"req_path'</a>!'
+    }
+}

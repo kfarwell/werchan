@@ -1,0 +1,91 @@
+werchan
+-------
+
+werchan is a message board based on werc.
+
+If you want to use werchan to host your own message board, read DEPLOYING.
+
+Visit #werchan on freenode if you would like to help with werchan development.
+
+Werc is a content management system and web (anti-)framework designed to be simple to
+use, simple to setup, simple to hack on, and not get on the way while allowing
+users easy customization.
+
+For more information see the official website: http://guhnoo.org/ and the Werc
+website: http://werc.cat-v.org/
+
+
+Installation
+------------
+
+Requirements:
+
+* Plan 9 from User Space: http://plan9.us - Or 9base-5 or later: http://tools.suckless.org/9base
+* An http server that can handle CGIs
+
+Instructions:
+
+Untar werc at your desired location, configure httpd to use
+/path-to-your-werc-installation/bin/werc.rc as a cgi-script, it is recommended
+that you make werc.rc handle all non-static files (this can be done by setting
+it up as your 404 handler) and setup your virtual hosts to handle static files
+by setting the document root for the domain to
+/path-to-werc-installation/sites/yourdomain.com/, and create a directory for
+your web site under sites/ where you can start adding content right away.
+
+If you will want to allow updates via the web interface (eg., for wiki or
+comments apps) make sure all files under sites/ are writable by the user your
+cgi will run as, usually www-data, for example by doing: chown -R :www-data
+sites/; chmod -R g+w sites/
+
+If your Plan 9 from User Space installation is located somewhere else than the
+standard /usr/local/plan9/ you will need to edit the first line of bin/werc.rc
+and bin/prune.rc (Note that p9p is picky about where it is located, once you run
+./INSTALL you should *not* move it to a different directory without running
+./INSTALL again.)
+
+For general configuration options copy etc/initrc to etc/initrc.local and
+customize it as needed. Site (and directory) specific options can be set in a
+sites/example.com/_werc/config file inside the site's directory. To customize
+templates and included files you can store your own version of the files in
+lib/ under sites/example.com/_werc/lib
+
+For more details see the documentation section of the website:
+http://werc.cat-v.org/docs/
+
+
+Contact
+-------
+
+For comments, suggestions, bug reports or patches join the werc9 list in
+google groups: http://groups.google.com/group/werc9 or the irc channel #plan9
+in irc.freenode.org
+
+If you have a public website that uses werc I would love to hear about it and
+get feedback about you experience setting it up.
+
+If you want to be notified of new releases see the News section of the website
+or use Freshmeat: http://freshmeat.net/projects/werc/
+
+werchan: http://guhnoo.org/meta/, #werchan on freenode, and
+gentoo at member dot fsf dot org.
+
+Thanks
+------
+
+werc: Garbeam, Kris Maglione, sqweek, soul9, mycroftiv, maht, yiyus and many
+others for their ideas, patches, testing and other contributions.
+
+werchan: thedoctor, that guy who was on IRC once, Squid, and the werchan community.
+
+
+License
+-------
+
+Werc is in the public domain.
+
+werchan is in the public domain. Alternatively if your prefer it or your
+country's brain dead copyright law doesn't recognize the public domain werchan
+is made available under the terms of the MIT and ISC licenses.
+
+werchan's markdown processor (bin/werchan-markdown*) depends on blackfriday and bluemonday, which are licensed under the Simplified BSD License.

@@ -1,0 +1,174 @@
+/*
+  burichan
+  werchan
+  http://guhnoo.org/
+*/
+
+body {
+  color: #C5C8C6;
+  background-color: #1D1F21;
+}
+
+
+/* # Header # */
+.superHeader {
+  color: #C5C8C6;
+  background-color: #1D1F21;
+}
+
+.superHeader a {
+  color: #81A2BE;
+}
+
+.midHeader {
+  color: #C5C8C6;
+  background-color: #282A2E;
+  border-width: 1px 0;
+}
+
+.headerTitle {
+  color: #C5C8C6;
+}
+
+.headerTitle a {
+  color: #C5C8C6;
+}
+
+.subHeader {
+  color: #C5C8C6;
+  background-color: gray;
+}
+
+.subHeader a {
+  color: #C5C8C6;
+  text-decoration: none;
+}  
+
+.superHeader .highlight, .subHeader .highlight {
+  color: #C5C8C6;
+}
+
+
+/* # Side # */
+#side-bar {
+  border-right: 1px solid #C5C8C6;
+}
+
+#side-bar div {
+  border-bottom: 1px solid #C5C8C6;
+}
+
+li ul {
+  padding-left: 1.0em !important;
+}
+
+#side-bar a {
+  color: #C5C8C6;
+  text-decoration: none;
+  padding: 0.35em 1ex 0.35em 2mm;
+  font-size: 104%;
+  border-left: #81A2BE solid 0.2em;
+}
+
+.thisPage, .thisPage a {
+  color: #81A2BE !important;
+  background-color: #C5C8C6;
+}
+
+#side-bar a:hover {
+  color: #C5C8C6;
+  background-color: #282A2E;
+  border-left: #81A2BE solid 0.2em;
+}
+
+#side-bar .sideBarText a:hover {
+  color: #C5C8C6;
+}
+
+
+/* # Main Copy # */
+#main-copy {
+  color: #C5C8C6;
+  border-left: 1px solid #C5C8C6;
+}
+
+#main-copy a {
+  color: #81A2BE;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-copy a:hover {
+  color: #81A2BE;
+  text-decoration: underline;
+}
+
+#main-copy h1, #main-copy h2 {
+  color: #C5C8C6;
+  border-bottom: 2px solid #C5C8C6;
+}
+
+#main-copy h2 {
+  border-bottom: 1px solid #C5C8C6;
+}
+
+#main-copy .topOfPage {
+  color: #C5C8C6;
+}
+
+
+/* # Footer # */
+#footer {
+  color: #C5C8C6;
+  background: #282A2E;
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm .15em 2.5mm;
+  border: solid 0 #C5C8C6;
+  border-width: 1px 0 1px 0;
+}
+
+#footer .left {
+  line-height: 1.45em;
+}
+
+#footer a {
+  color: #C5C8C6;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* GENERAL */
+
+table {
+  border: solid 1px #C5C8C6;
+}
+th {
+  background-color: gray;
+  border: solid 1px #C5C8C6;
+}
+td {
+  background-color: #FF7FA8;
+  border: solid 1px #C5C8C6;
+}
+
+hr {
+  border-color: #C5C8C6;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px solid #C5C8C6;
+}
+
+blockquote {
+  border-left: 1px solid gray;
+}
+
+
+.notify_errors,
+.notify_notes,
+.notify_success { padding: .8em; margin-bottom: 1em; border: 2px solid #C5C8C6; }
