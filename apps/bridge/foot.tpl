@@ -1,57 +1,5 @@
 % masterSiteTitle=`{cat sites/*/_werc/config | grep siteTitle | cut -d'''' -f 2}
 % if(! ~ $siteTitle $masterSiteTitle) {
-<hr>
-
-<button title="# Your Heading-- Use more '#'s for a smaller heading" onclick="heading(1)">Heading</button>
-<button title="**Your Bold Text**" onclick="bold()">Bold</button>
-<button title="*Your Italic Text*" onclick="italic()">Italic</button>
-<button title="* Your Bullet Point" onclick="list()">List</button>
-<button title="***" onclick="rule()">Rule</button>
-<button title="`Your Code`" onclick="code()">Code</button>
-<button title="[Your Link Description](http://your.link/)" onclick="link()">Link</button>
-<button title="![Your Optional Image Description](http://yo.ur/image.jpg)" onclick="image()">Image</button>
-
-<script>
-    function quotePost(num) {
-        document.getElementById('comment_text').value+="[>>" + num + "](#" + num + ")\n";
-    }
-
-    function heading(size) {
-        document.getElementById('comment_text').value+="\n";
-        for (i = 1; i <= size; i++) {
-            document.getElementById('comment_text').value+="#";
-        }
-        document.getElementById('comment_text').value+=" ";
-    }
-    function bold() {
-        document.getElementById('comment_text').value+="**important**";
-    }
-    function italic() {
-        document.getElementById('comment_text').value+="*important*";
-    }
-    function list() {
-        document.getElementById('comment_text').value+="\n* ";
-    }
-    function rule() {
-        document.getElementById('comment_text').value+="\n\n***\n\n";
-    }
-    function code() {
-        document.getElementById('comment_text').value+="\n`\ncode\n`\n";
-    }
-    function link() {
-        document.getElementById('comment_text').value+="[title](http://)";
-    }
-    function image() {
-        document.getElementById('comment_text').value+="![](http://f.guhnoo.org/)\n";
-    }
-    function quoteOP() {
-        document.getElementById('comment_text').value+="[>>OP](#top)\n";
-    }
-    function vote(option) {
-        document.getElementById('poll').value=option;
-    }
-</script>
-
 % notices_handler
 <form action="" method="post">
     <textarea name="comment_text" id="comment_text" cols="80" rows="16">%($"saved_comment_text%)</textarea>

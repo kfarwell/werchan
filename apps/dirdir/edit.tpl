@@ -1,53 +1,7 @@
 <div>
-    <script>
-        function quotePost(num) {
-            document.getElementById('edit_text').value+="[>>" + num + "](#" + num + ")\n";
-        }
-    
-        function heading(size) {
-            document.getElementById('edit_text').value+="\n";
-            for (i = 1; i <= size; i++) {
-                document.getElementById('edit_text').value+="#";
-            }
-            document.getElementById('edit_text').value+=" ";
-        }
-        function bold() {
-            document.getElementById('edit_text').value+="**important**";
-        }
-        function italic() {
-            document.getElementById('edit_text').value+="*important*";
-        }
-        function list() {
-            document.getElementById('edit_text').value+="\n* ";
-        }
-        function rule() {
-            document.getElementById('edit_text').value+="\n\n***\n\n";
-        }
-        function code() {
-            document.getElementById('edit_text').value+="\n`\ncode\n`\n";
-        }
-        function link() {
-            document.getElementById('edit_text').value+="[title](http://)";
-        }
-        function image() {
-            document.getElementById('edit_text').value+="![](http://f.guhnoo.org)\n";
-        }
-        function quoteOP() {
-            document.getElementById('edit_text').value+="[>>OP](#top)\n";
-        }
-    </script>
     <h1>New Thread</h1>
     <form action="" method="POST">
         <p><b>Subject:</b> <input type="text" name="subject" value="%(`{if(~ $#post_arg_subject 1) echo -n $post_arg_subject}%)"></p>
-        <button title="# Your Heading-- Use more '#'s for a smaller heading" onclick="heading(1)" type="button">Heading</button>
-        <button title="**Your Bold Text**" onclick="bold()" type="button">Bold</button>
-        <button title="*Your Italic Text*" onclick="italic()" type="button">Italic</button>
-        <button title="* Your Bullet Point" onclick="list()" type="button">List</button>
-        <button title="***" onclick="rule()" type="button">Rule</button>
-        <button title="`Your Code`" onclick="code()" type="button">Code</button>
-        <button title="[Your Link Description](http://your.link/)" onclick="link()" type="button">Link</button>
-        <button title="![Your Optional Image Description](http://yo.ur/image.jpg)" onclick="image()" type="button">Image</button>
-        <br>
         <textarea name="edit_text" id="edit_text" cols="80" rows="24">%{
 # FIXME Extra trailing new lines get added to the content somehow, should avoid it.
             if(~ $#post_arg_edit_text 1)
