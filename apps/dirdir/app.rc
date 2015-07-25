@@ -44,7 +44,7 @@ fn save_page {
         echo `{date} >> $dirdir_verdir/data
 
         postnum=`{cat $dirdir_dir/../../postnum}
-        echo '<a id="'$postnum'" href="#top">No.</a><a onclick="quoteOP()">'$postnum'</a>' >> $dirdir_verdir/data
+        echo '<a id="'$postnum'" href="#top">No.</a><a onclick="quotePost("OP")">'$postnum'</a>' >> $dirdir_verdir/data
         echo $postnum | awk 'echo $1++' > $dirdir_dir/../../postnum
 
         echo '</b></p>' >> $dirdir_verdir/data

@@ -1,5 +1,14 @@
 % masterSiteTitle=`{cat sites/*/_werc/config | grep siteTitle | cut -d'''' -f 2}
 % if(! ~ $siteTitle $masterSiteTitle) {
+<script>
+    function quotePost(num) {
+        document.getElementById('comment_text').value+="@" + num + "\n";
+    }
+    // legacy support for old threads, new OPs use `quotePost("OP")` directly
+    function quoteOP() {
+        quotePost("OP");
+    }
+</script>    
 % notices_handler
 <form action="" method="post">
     <textarea name="comment_text" id="comment_text" cols="80" rows="16">%($"saved_comment_text%)</textarea>
