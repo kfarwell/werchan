@@ -33,7 +33,7 @@
                 <option value="robot">I'm a robot!</option>
             </select>
         </label>
-        <br /><small>Posts are written using <a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> with some <a href="/markdown">extensions</a>.</small>
+        <br /><small>werchan supports fancy post formatting. <a href="/formatting">Learn the syntax here.</a></small>
     </form>
 
     <hr />

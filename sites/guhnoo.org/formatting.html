@@ -1,0 +1,142 @@
+<!-- title
+formatting
+-->
+
+<h1>Post Formatting</h1>
+<p>werchan posts are written in <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> with a number of additions.</p>
+
+<h2>Post References</h2>
+<p>There are a couple ways to reference other posts:</p>
+<ul>
+  <li>Click the post number next to the post you wish to reference.</li>
+  <h5>
+    <i>Anonymous</i> Sun Jan 01 12:00:00 EDT 1970 <a href="#123" id="123">No.</a><a onclick="quotePost(123)">123</a> &lt;-- this will insert a post reference to No.123 in your post
+  </h5>
+  <li><code>@123</code> references No.123</li>
+  <li><code>@OP</code> references the Original Poster in the thread</li>
+  <li><code>[this guy](#123)</code> references a post with custom text</li>
+  <li><code>[@/meta/123](/meta/thread_title#123)</code> references a post in another thread or board</li>
+</ul>
+
+<h2>Embeds</h2>
+<p>You can upload files with the upload form, found below every post form:</p>
+<form action="http://f.guhnoo.org/api.php?d=upload" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="MAX_FILE_SIZE" value="2000000000" />
+        <span>File:</span>
+        <input type="file" name="file" />
+        <button type="submit">Upload</button><br />
+        You still need to include images in your post (<code>![description](http://f.guhnoo.org/blah.png)</code>) after uploading them!
+</form>
+<p>Then you can embed those files in your posts with <code>![optional description](http://f.guhnoo.org/filename.ext)</code>.</p>
+<p>If the file is an AAC, FLAC, MKV, MP3, MP4, OGG, OPUS, WAV, or WEBM, it is embedded as audio/video.</p>
+<p>If the file is an FODG, FODP, FODS, FODT, ODG, ODP, ODS, ODT, or PDF, it is embedded as a document.</p>
+<p>If the file is an OBJ or STL, it is embedded as a 3D model.</p>
+<p>Otherwise, the file is embedded as an image.</p>
+<p>You can embed audio, video, and images from other domains with <code>![optional description](http[s]://otherdomain.tld/filename.ext)</code>. Only files uploaded to f.guhnoo.org can be embedded as documents and 3D models.</p>
+<p>You can embed YouTube videos with <code>![](https://www.youtube.com/watch?v=video_id)</code>.</p>
+
+<h2>Blockquotes</h2>
+<p><code>
+&gt; This is some quoted text.<br />
+This is the second line of the quoted text.<br /><br />
+This text is not quoted. Note the blank line before it.
+</code></p>
+
+<h2>Links</h2>
+<p><code>[displayed text](protocol://domain.tld/whatever)</code></p>
+<p><code>protocol://automatic.link/whatever</code></p>
+
+<h2>Emphasis</h2>
+<p><code>*italic*</code></p>
+<p><code>_italic_</code></p>
+<p><code>**bold**</code></p>
+<p><code>__italic__</code></p>
+<p><code>***bold and italic***</code></p>
+<p><code>___bold and italic___</code></p>
+<p><code>~~strikethrough~~</code></p>
+
+<h2>Unordered Lists</h2>
+<p><code>
+* Red<br />
+* Green<br />
+* Blue<br />
+</code></p>
+<p><code>
++ Red<br />
++ Green<br />
++ Blue<br />
+</code></p>
+<p><code>
+- Red<br />
+- Green<br />
+- Blue<br />
+</code></p>
+
+<h2>Ordered Lists</h2>
+<p><code>
+1. Red<br />
+2. Green<br />
+3. Blue<br />
+</code></p>
+
+<h2>Headings</h2>
+<p><code>
+Heading 1<br />
+=========
+</code></p>
+<p><code>
+Heading 2<br />
+---------
+</code></p>
+<p><code># Heading 1</code></p>
+<p><code>## Heading 2</code></p>
+<p><code>### Heading 3</code></p>
+<p><code>#### Heading 4</code></p>
+<p><code>##### Heading 5</code></p>
+<p><code>###### Heading 6</code></p>
+
+<h2>Code</h2>
+<p><code>`inline code`</code></p>
+<p><code>
+```<br />
+fn code block {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;code(block);<br />
+}<br />
+```
+</code></p>
+<p><code>
+&nbsp;&nbsp;&nbsp;&nbsp;fn code block {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Note the four leading spaces before each line. */<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</code></p>
+
+<h2>Tables</h2>
+<p><code>
+Name&nbsp;&nbsp;&nbsp;&nbsp;| Age<br />
+--------|------<br />
+Bob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 27<br />
+Alice&nbsp;&nbsp;&nbsp;| 23
+</code></p>
+
+<h2>Fractions</h2>
+<p><code>1/2</code></p>
+
+<h2>Dashes</h2>
+<p><code>--</code></p>
+<p><code>---</code></p>
+
+<h2>Horizontal Rules</h2>
+<p><code>* * *</code></p>
+<p><code>***</code></p>
+<p><code>*****</code></p>
+<p><code>- - -</code></p>
+<p><code>---------------------------------------</code></p>
+
+<h2>Backslash Escapes</h2>
+<p><code>\*Literal Asterisks\*</code></p>
+
+<h2>Inline HTML</h2>
+<p><code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></p>
+<p><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Table&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></p>
+<p><code>&lt;span&gt;Span&lt;/span&gt;</code></p>
+<p>etc.</p>
