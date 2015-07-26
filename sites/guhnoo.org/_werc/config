@@ -1,8 +1,8 @@
 siteTitle='werchan'
-siteSubTitle='a trendy slogan goes here'
+siteSubTitle=`{fortune fortunes.txt}
 
 sideBarNavTitle='Thread List'
-conf_hide_paths radio TODO fqa rules privacy userscripts donate formatting banners img team example
+conf_hide_paths radio TODO fortunes fqa rules privacy userscripts donate formatting banners img team example
 
 conf_enable_comments
 bridge_anon_comments=yes
