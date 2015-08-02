@@ -59,5 +59,8 @@
 % }
 % if (! ~ `{get_cookie ads} 'disabled')
 %     cat `{ get_lib_file ad.inc }
-% cat `{ get_lib_file footer.inc }
+<div class="center">
+    <img src="/banners/%{fortune $sitedir/banners/index.txt%}" style="max-height:8em" /><br />
+    All trademarks and copyrights on this page are owned by their respective parties. Comments are owned by the Poster.
+</div>
 </div>

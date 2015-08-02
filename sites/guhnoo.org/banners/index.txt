@@ -1,0 +1,5 @@
+mothra.png
+nasa.jpg
+original.png
+snoop.png
+captcha.gif

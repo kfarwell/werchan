@@ -63,6 +63,6 @@
         <span>File:</span>
         <input type="file" name="file" />
         <button type="submit">Upload</button><br />
-        You still need to include images in your post (<code>![description](http://f.guhnoo.org/blah.png)</code>) after uploading them!
+        <small>You still need to include files in your post after uploading them! Embed them with <code>![description](http://f.guhnoo.org/blah.png)</code>.</small>
 </form>
 % }
