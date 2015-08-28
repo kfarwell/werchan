@@ -1,20 +1,6 @@
 <hr>
 <h2>Comments</h2>
 
-<!-- broken somehow
-% if(~ $siteTitle '/poll/') {
-<h3>Summary</h3>
-% poll=$sitedir$req_path'_poll'
-% votes=$sitedir$req_path'_votes'
-<p>
-% for(i in `{cat $poll}) {
-<b>%($i%):</b> %(`{cat $votes | grep -c $i}%)<br />
-% }
-</p>
-<hr />
-% }
--->
-
 % for(c in `{ls $comments_dir/}) {
 %    if(test -s $c/body) {
         <div class="comment">

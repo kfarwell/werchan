@@ -1,0 +1,182 @@
+/*
+  modern
+  werchan
+  http://guhnoo.org/
+*/
+
+body {
+  color: #222;
+  background-color: #FFF;
+  font-family: "Roboto", "sans-serif";
+  font-weight: 400;
+}
+
+
+/* # Header # */
+.superHeader {
+  color: #000;
+  background-color: #FFF;
+}
+
+.superHeader a {
+  color: #333;
+}
+.superHeader a:hover {
+  text-decoration: none;
+  color: #087CC0;
+}
+
+.midHeader {
+  color: #333;
+  background-color: #F3F3F3;
+  border-width: 1px 0;
+  border-color: #DADADA
+}
+
+.headerTitle {
+  color: #333;
+}
+
+.headerTitle a {
+  color: #333;
+}
+
+.subHeader {
+  color: #000;
+  background-color: gray;
+}
+
+.subHeader a {
+  color: #000;
+  text-decoration: none;
+}  
+
+.superHeader .highlight, .subHeader .highlight {
+  color: #000;
+}
+
+
+/* # Side # */
+#side-bar {
+  border-right: 0;
+}
+
+#side-bar div {
+  border-bottom: 0;
+}
+
+li ul {
+  padding-left: 1.0em !important;
+}
+
+#side-bar a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.35em 1ex 0.35em 2mm;
+  font-size: 104%;
+  border-left: 0;
+}
+
+.thisPage, .thisPage a {
+  color: #087CC0!important;
+  background-color: #FFF;
+}
+
+#side-bar a:hover {
+  color: #087CC0;
+  background-color: #FFF;
+  border-left: 0;
+}
+
+#side-bar .sideBarText a:hover {
+  color: #087CC0;
+}
+
+
+/* # Main Copy # */
+#main-copy {
+  color: #333;
+  border-left: 0;
+}
+
+#main-copy a {
+  color: #107CC0;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+#main-copy a:hover {
+  color: #6DAAD0;
+  text-decoration: none;
+}
+
+#main-copy h1, #main-copy h2 {
+  color: #333;
+  border-bottom: 0;
+}
+
+#main-copy h2 {
+  border-bottom: 0;
+}
+
+#main-copy .topOfPage {
+  color: #000;
+}
+
+
+/* # Footer # */
+#footer {
+  color: #333;
+  background: #F3F3F3;
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm .15em 2.5mm;
+  border: solid 0 #DADADA;
+  border-width: 1px 0 1px 0;
+}
+
+#footer .left {
+  line-height: 1.45em;
+}
+
+#footer a {
+  color: #107CC0;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #6DAAD0;
+  text-decoration: none;
+}
+
+
+/* GENERAL */
+
+table {
+  border: 0;
+}
+th {
+  background-color: #FFF;
+  border: 0;
+}
+td {
+  background-color: #FFF;
+  border: 0;
+}
+
+hr {
+  border-color: #333;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px solid #333;
+}
+
+blockquote {
+  border-left: 1px solid #333;
+}
+
+
+.notify_errors,
+.notify_notes,
+.notify_success { padding: .8em; margin-bottom: 1em; border: 2px solid #000; }

@@ -44,7 +44,7 @@ fn save_page {
         echo `{date} >> $dirdir_verdir/data
 
         postnum=`{cat $dirdir_dir/../../postnum}
-        echo '<a id="'$postnum'" href="#top">No.</a><a onclick="quotePost("OP")">'$postnum'</a>' >> $dirdir_verdir/data
+        echo '<a id="'$postnum'" href="#top">No.</a><a onclick="quotePost(''OP'')">'$postnum'</a>' >> $dirdir_verdir/data
         echo $postnum | awk 'echo $1++' > $dirdir_dir/../../postnum
 
         echo '</b></p>' >> $dirdir_verdir/data
@@ -91,6 +91,9 @@ fn save_page {
         }
 
         cp $dirdir_verdir/data $dirdir_file
+
+        # make thread index find replyless threads
+        mkdir -p $lp^'_werc/'
 
         post_redirect $base_url^$req_path^`{echo $post_arg_subject | sed 's,[^A-Za-z0-9],_,g; s/^_/baka_/'}
         #notify_notes='Posted <a href="'$"req_path'">'$"req_path'</a>!'

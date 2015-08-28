@@ -2,9 +2,10 @@ siteTitle='werchan'
 siteSubTitle=`{fortune fortunes.txt}
 
 sideBarNavTitle='Thread List'
-conf_hide_paths TODO fortunes fqa rules privacy userscripts donate radio formatting banners img team example
+conf_hide_paths TODO fortunes fqa rules privacy userscripts donate radio formatting banners img team 
 
 conf_enable_comments
 bridge_anon_comments=yes
 conf_enable_wiki
 conf_enable_radio
+conf_enable_all

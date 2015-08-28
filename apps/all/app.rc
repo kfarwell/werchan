@@ -1,0 +1,11 @@
+fn conf_enable_all {
+    enable_all=yes
+    conf_enable_app all
+}
+
+fn all_init {
+    if(~ $req_path /all) {
+        handler_body_main=(tpl_handler `{get_lib_file all/index.tpl apps/all/index.tpl})
+        pageTitle='all'
+    }
+}

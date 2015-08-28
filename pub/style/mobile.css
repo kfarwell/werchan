@@ -1,29 +1,35 @@
 body {
-  font-size: 115%;
+  font-size: 200%;
+}
+
+input, button, select, textarea {
+  font-size: inherit;
+}
+
+#main-copy {
+  margin-left: 25vw;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+#side-bar {
+  width: 25vw;
 }
 
 #side-bar a {
   padding: 0.75em 1ex 0.75em 2mm;
-  font-size: 150%;
 }
 
-.superHeader {
-  font-size: 250%;
+.superHeader span {
+  margin-right: initial;
 }
 
-.left {
-  text-align: left;
-}
-.right {
-  text-align: right;
+#boards {
+  margin-top: 1em;
 }
 
 .superHeader span {
   display: block;
-}
-
-button, select, input {
-  font-size: 200%;
 }
 
 textarea {

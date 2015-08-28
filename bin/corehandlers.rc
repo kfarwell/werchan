@@ -34,6 +34,46 @@ fn nav_tree {
     }
     END { p(lNF, 2, "</ul>") }'
 }
+# bad
+fn nav_tree_ext {
+    recent_num=`{get_cookie recent_num}
+    recent_comments_num=`{get_cookie recent_comments_num}
+    if(! ~ `{echo $recent_num | awk '{print ($1 > 0 && $1 < 11)}'} 1) recent_num=3
+    if(! ~ `{echo $recent_comments_num | awk '{print ($1 > 0 && $1 < 11)}'} 1) recent_comments_num=3
+
+    echo '<h1>Recently bumped threads</h1>'
+    # Ignore stderr, last path element might be a file that doesn't exist (eg., foo for foo.md)
+    # /./ to deal with p9p's ls failure to follow dir symlinks otherwise
+    for(i in `{find $sitedir/./$req_paths_list -maxdepth 1 -mindepth 1 -printf '%T+ %p\n' | sort -r | sed 's/^.* //' >[2]/dev/null \
+        | { 
+            sed $dirfilter'/\/[^_.\/][^\/]*(\.(md|txt|html)|\/)$/!d; s!^'$sitedir'!!; '$dirclean'1d; s!$!.html!g; s|postnum||'
+            if(! ~ $#synth_paths 0) echo $synth_paths | tr ' ' $NEW_LINE 
+        } | head -n $recent_num
+    }) {
+        if(! ~ $firstrun '') echo '<br /><hr style="font-size: 200%" />'
+        firstrun=false
+        cat $sitedir$i | sed 's,^<a id="(.*)" href="#top">,<a id="\1" href="'`{ echo $i | sed 's/.html$//'}^'#top">,'
+
+        comments_dir=`{ls $sitedir`{echo $i | sed 's/.html$//'}^_werc/comments | tail -n $recent_comments_num}
+        if(test -d $comments_dir) {
+            echo '<hr /><h2>Recent Comments</h2>'
+            j=1
+            for(c in $comments_dir) {
+                if(test -s $c/body) {
+                    echo '<div class="comment">'
+                    echo '<h5>'
+                    if(test -f sites/*/team/`{cat $c/user}) echo '          <img class="face" src="/team/'`{cat $c/user}'" />'
+                    echo '<i>'`{cat $c/user}'</i>'`{cat $c/posted}' <a href="'`{echo $i | sed 's/.html$//'}^'#'`{cat $c/postnum}'" id="'`{cat $c/postnum}'">No.</a><a>'`{cat $c/postnum}'</a>'
+                    echo '</h5>'
+                    cat $c/body
+                    if(! ~ `{echo $comments_dir | wc -w} $j) echo '<hr>'
+                    echo '</div>'
+                }
+                j=`{echo $j | awk 'echo $1++'}
+            }
+        }
+    }
+}
 
 fn link_bar {
     if(~ $1 -t) {

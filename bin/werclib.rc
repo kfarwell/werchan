@@ -127,6 +127,12 @@ fn set_settings {
         set_cookie ads $post_arg_ads
     if(! ~ $#post_arg_radio 0)
         set_cookie radio $post_arg_radio
+    if(! ~ $#post_arg_mobile 0)
+        set_cookie mobile $post_arg_mobile
+    if(! ~ $#post_arg_recent_num 0)
+        set_cookie recent_num $post_arg_recent_num
+    if(! ~ $#post_arg_recent_comments_num 0)
+        set_cookie recent_comments_num $post_arg_recent_comments_num
 }
 
 

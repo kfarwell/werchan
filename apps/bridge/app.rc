@@ -18,7 +18,7 @@ fn bridge_init {
     if(~ $#enable_comments 1 && ! ~ `{ls $local_path.$comment_file_types >[2]/dev/null|wc -l} 0) {
 
         comments_dir=$sitedir$req_path'_werc/comments'
-        if(~ $REQUEST_METHOD GET && test -d $comments_dir)
+        if({~ $REQUEST_METHOD GET || ~ $#post_arg_bridge_preview 1} && test -d $comments_dir)
             ll_add handlers_body_foot template apps/bridge/comments_list.tpl
 
         if(check_user $groups_allowed_comments || {~ $#logged_user 0 && ~ 1 $#allow_new_user_comments $#bridge_anon_comments}) {
@@ -30,6 +30,10 @@ fn bridge_init {
                     post_redirect $base_url^$req_path
                 if not
                     saved_comment_text=$post_arg_comment_text
+            }
+            if not if(~ $#post_arg_bridge_preview 1) {
+                ll_add handlers_body_foot template apps/bridge/foot.tpl
+                saved_comment_text=$post_arg_comment_text
             }
             if not if(~ $REQUEST_METHOD GET)
                 ll_add handlers_body_foot template apps/bridge/foot.tpl
