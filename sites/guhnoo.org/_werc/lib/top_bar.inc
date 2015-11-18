@@ -7,7 +7,8 @@
         <a href="/donate">donate</a> |
         <a href="/radio">radio</a> |
         <a href="/settings">settings</a> |
-        <a href="http://kfarwell.org/projects/werchan/">code</a>
+        <a href="http://kfarwell.org/projects/werchan/">code</a> |
+        <a href="http://werchan24h52wjqi.onion/">tor</a>
       ]
     </div>
 
