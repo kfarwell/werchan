@@ -8,5 +8,6 @@
 <script type="text/javascript" 
     src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
 
+<h4>If there used to be a thread here that was deleted as spam, you can find it on <a href="/spam/">/spam/</a>.</h4>
 <h4>Or take a look at the <a href="/sitemap">sitemap</a>.</h4>
 <hr>
