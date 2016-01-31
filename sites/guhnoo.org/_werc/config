@@ -9,3 +9,4 @@ bridge_anon_comments=yes
 conf_enable_wiki
 conf_enable_radio
 conf_enable_all
+conf_enable_search

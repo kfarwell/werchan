@@ -38,3 +38,8 @@
         <a href="/spam/">spam</a>
       ]</span>
     </div>
+
+    <form action="/search" method="post" id="search">
+      <input name="search">
+      <input type="submit" value="Search">
+    </form>
