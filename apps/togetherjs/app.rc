@@ -1,0 +1,9 @@
+fn conf_enable_togetherjs {
+    enable_togetherjs=yes
+    conf_enable_app togetherjs
+}
+
+fn togetherjs_init {
+    if(~ $#enable_togetherjs 1)
+        ll_add handlers_bar_left template apps/togetherjs/togetherjs.tpl
+}
