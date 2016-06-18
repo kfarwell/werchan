@@ -35,6 +35,7 @@
         <a href="/all">all</a> |
         <a href="/meta/">meta</a> |
         <a href="/poll/">poll</a> |
+        <a href="/collab/">collab</a> |
         <a href="/spam/">spam</a>
       ]</span>
     </div>
